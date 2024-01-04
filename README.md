@@ -2,6 +2,8 @@
 
 An adaptation of [Semaphore v4](https://github.com/semaphore-protocol/semaphore/tree/feat/semaphore-v4) simplified and using [Foundry](https://getfoundry.sh/) for the contracts while also adding the ability to decrypt proofs using STARK-friendly asymmetric ElGamal encryption as implemented by [Shigoto-dev19](https://github.com/Shigoto-dev19/ec-elgamal-circom)
 
+Get started using the [example app](https://github.com/numtel/semaphore-decryptable-example)!
+
 ## Deployed Contracts
 
 Network | Contract
