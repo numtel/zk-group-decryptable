@@ -1,4 +1,4 @@
-import crypto from "node:crypto";
+import crypto from "crypto";
 import createBlakeHash from "blake-hash/js.js";
 import * as ff from "ffjavascript";
 import { twistedEdwards } from "@noble/curves/abstract/edwards";

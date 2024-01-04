@@ -1,4 +1,4 @@
-import fs from "node:fs";
+import fs from "fs";
 import { babyJub } from "./ElGamal.js";
 
 const directoryName = "lookupTables";
