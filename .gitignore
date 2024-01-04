@@ -1,0 +1,9 @@
+node_modules
+ptau
+main
+build
+lookupTables
+test/semaphore.circom
+
+*.swp
+*.swo

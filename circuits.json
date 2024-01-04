@@ -1,0 +1,8 @@
+{
+  "semaphore": {
+    "file": "circuits/semaphore",
+    "template": "Semaphore",
+    "pubs": ["message", "scope", "publicKey"],
+    "params": [20]
+  }
+}
