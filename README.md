@@ -9,3 +9,32 @@ Get started using the [example app](https://github.com/numtel/semaphore-decrypta
 Network | Contract
 --------|-----------
 Holesky | [0x0xBE5aaa6dA0445d4a9989702E0FB8B590039112f1](https://holesky.etherscan.io/address/0xBE5aaa6dA0445d4a9989702E0FB8B590039112f1)
+
+## Installation
+
+> You must have Node.js, Yarn, Foundry, and Circom installed.
+
+```
+$ git clone git@github.com:numtel/zk-group-decryptable.git
+$ cd zk-group-decryptable
+$ yarn
+
+# Configure circuit
+$ npx circomkit compile semaphore
+$ npx circomkit ptau semaphore
+$ npx circomkit setup semaphore
+$ npx circomkit instantiate semaphore
+$ npx circomkit contract semaphore
+
+# Ready to run tests
+$ yarn test
+
+# Configure to deploy
+$ cp .env.example .env
+$ vim .env
+$ yarn deploy:holesky
+```
+
+## License
+
+MIT
