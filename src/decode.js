@@ -1,5 +1,5 @@
 import fs from "fs";
-import { babyJub } from "./ElGamal.js";
+import { babyJub } from "./elGamal.js";
 
 const directoryName = "lookupTables";
 

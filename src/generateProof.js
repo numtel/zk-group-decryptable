@@ -2,7 +2,7 @@ import { BigNumber } from "@ethersproject/bignumber";
 import { zeroPad } from "@ethersproject/bytes";
 import { keccak256 } from "@ethersproject/keccak256"
 import { prove } from "@zk-kit/groth16"
-import { encrypt, encode } from "./ElGamal.js";
+import { encrypt, encode } from "./elGamal.js";
 import Group from "./Group.js";
 import Identity from "./Identity.js";
 
@@ -13,10 +13,10 @@ export default async function generateProof(identity, group, message, scope, pub
 
   treeDepth = treeDepth || merkleProofLength;
 
-  // If the Snark artifacts are not defined they will be automatically downloaded.
-  if (!snarkArtifacts) {
-      snarkArtifacts = await getSnarkArtifacts(treeDepth)
-  }
+  snarkArtifacts = snarkArtifacts || {
+    wasmFilePath: `https://config.clonk.me/semaphore-decryptable-dev/${treeDepth}/semaphore.wasm`,
+    zkeyFilePath: `https://config.clonk.me/semaphore-decryptable-dev/${treeDepth}/semaphore.zkey`,
+  };
 
   // The index must be converted to a list of indices, 1 for each tree level.
   // The missing siblings can be set to 0, as they won't be used in the circuit.
@@ -74,13 +74,6 @@ export default async function generateProof(identity, group, message, scope, pub
       proof.pi_c[0],
       proof.pi_c[1]
     ]
-  }
-}
-
-function getSnarkArtifacts(treeDepth) {
-  return {
-    wasmFilePath: `https://config.clonk.me/semaphore-decryptable-dev/${treeDepth}/semaphore.wasm`,
-    zkeyFilePath: `https://config.clonk.me/semaphore-decryptable-dev/${treeDepth}/semaphore.zkey`
   }
 }
 

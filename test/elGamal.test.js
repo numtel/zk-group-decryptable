@@ -1,6 +1,6 @@
 import assert from "node:assert";
 
-import { decode, split64 } from "../src/Decode.js";
+import { decode, split64 } from "../src/decode.js";
 import { 
   babyJub,
   genRandomPoint,
@@ -11,7 +11,7 @@ import {
   encrypt_s,
   decrypt,
   rerandomize,
-} from "../src/ElGamal.js";
+} from "../src/elGamal.js";
 
 const b32 = 4294967296n;
 

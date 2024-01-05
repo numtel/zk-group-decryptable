@@ -6,8 +6,8 @@ import { LeanIMT } from "@zk-kit/imt";
 import { poseidon2 } from "poseidon-lite";
 import { Circomkit, WitnessTester } from "circomkit";
 
-import { genKeypair, encode, encrypt, decrypt } from "../src/ElGamal.js";
-import { decode} from "../src/Decode.js";
+import { genKeypair, encode, encrypt, decrypt } from "../src/elGamal.js";
+import { decode } from "../src/decode.js";
 
 const config = JSON.parse(readFileSync("circomkit.json", "utf-8"));
 const circomkit = new Circomkit({...config, verbose: false});
